@@ -6,7 +6,7 @@ subtitle: <a href="https://www.khoury.northeastern.edu/">MS Artificial Intellige
 
 profile:
   align: right
-  image: WhatsApp Image 2025-12-25 at 13.46.08.jpeg
+  image: chidvilash.jpeg
   image_circular: true
   more_info: >
     <p>San Jose, California</p>
