@@ -4,7 +4,7 @@ title: Intelligent Spell Corrector
 description: DP-based spell corrector with Streamlit demo and interactive edit distance table visualizer
 img: assets/img/projects/spell.jpg
 importance: 3
-category: Algorithms & NLP
+category: work
 github: https://github.com/chidvilash333
 ---
 
