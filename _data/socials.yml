@@ -1,11 +1,8 @@
-- icon: fab fa-github
-  url: https://github.com/chidvilash333
-  title: GitHub
-
-- icon: fab fa-linkedin
-  url: https://www.linkedin.com/in/chidvilash-yeccharla-b7099528a/
-  title: LinkedIn
-
-- icon: fas fa-envelope
+- name: email
   url: mailto:chidvilash3336@gmail.com
-  title: Email
+
+- name: github
+  url: https://github.com/chidvilash333
+
+- name: linkedin
+  url: https://www.linkedin.com/in/chidvilash-yeccharla-b7099528a/
