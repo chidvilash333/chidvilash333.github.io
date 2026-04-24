@@ -4,7 +4,7 @@ title: Salary Optimization Advisor
 description: AI-powered Flask web app for personalized salary negotiation guidance using Groq API
 img: assets/img/projects/salary.jpg
 importance: 2
-category: Web Apps
+category: work
 github: https://github.com/chidvilash333
 ---
 
