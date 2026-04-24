@@ -17,36 +17,35 @@
   contents:
     - title: MS Artificial Intelligence
       institution: Northeastern University, Silicon Valley
-      year: 2024 - 2026
+      year: 2024-2026
       description:
-        - "Coursework: Foundations of AI (CS 5100), Algorithms (CS 5800), Machine Learning"
-    - title: B.Tech Electronics & Communication Engineering (Minor: AI/ML)
+        - Foundations of AI, Algorithms, Machine Learning
+    - title: B.Tech Electronics and Communication Engineering
       institution: VIT-AP University, India
-      year: 2020 - 2024
+      year: 2020-2024
       description:
-        - "GPA: 3.41/4.00"
+        - Minor in AI/ML, GPA 3.41/4.00
 
 - title: Projects
   type: time_table
   contents:
-    - title: Ask My Docs – RAG Application
+    - title: Ask My Docs RAG Application
       year: 2024-2025
       description:
-        - Production-grade RAG system with hybrid BM25 + dense retrieval
-        - Cross-encoder reranking and RAGAS evaluation (faithfulness, context recall, answer relevancy)
-        - "Tech: Python, LangChain, ChromaDB, HuggingFace, RAGAS"
+        - Production-grade RAG with hybrid BM25 and dense retrieval
+        - Cross-encoder reranking and RAGAS evaluation
+        - Python, LangChain, ChromaDB, HuggingFace
     - title: Salary Optimization Advisor
       year: 2024-2025
       description:
-        - Flask web app providing AI-powered salary guidance using Groq API
-        - Dynamic prompt engineering based on role, experience, and location
-        - "Tech: Python, Flask, Groq API"
+        - Flask web app with AI salary guidance using Groq API
+        - Python, Flask, Groq API, Prompt Engineering
     - title: Intelligent Spell Corrector
       year: 2024-2025
       description:
-        - DP-based spell correction using edit distance (Levenshtein) algorithm
-        - Interactive Streamlit demo with step-by-step DP table visualizer
-        - "Tech: Python, Streamlit, Dynamic Programming"
+        - DP-based spell correction using edit distance algorithm
+        - Interactive Streamlit demo with DP table visualizer
+        - Python, Streamlit, Dynamic Programming
 
 - title: Publications
   type: time_table
@@ -55,12 +54,12 @@
       year: 2025
       description:
         - Published at ICISSC-2025, Springer
-        - AI system that detects and adapts to user emotional states in real-time
+        - AI system adapting to user emotional states in real-time
 
 - title: Skills
   type: list
   contents:
-    - "<b>Languages:</b> Python, C++, SQL, Bash"
-    - "<b>AI/ML:</b> PyTorch, TensorFlow, Scikit-learn, HuggingFace, LangChain"
-    - "<b>LLMs & NLP:</b> RAG, LLaMA, OpenAI API, Groq API, Transformers, BERT, T5"
-    - "<b>Tools:</b> Git, Docker, Google Colab, Flask, Streamlit, ChromaDB, FAISS, VS Code"
+    - "<b>Languages</b> - Python, C++, SQL, Bash"
+    - "<b>AI/ML</b> - PyTorch, TensorFlow, Scikit-learn, HuggingFace, LangChain"
+    - "<b>LLMs and NLP</b> - RAG, LLaMA, OpenAI API, Groq API, Transformers"
+    - "<b>Tools</b> - Git, Docker, Google Colab, Flask, Streamlit, ChromaDB, FAISS"
