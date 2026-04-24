@@ -4,7 +4,7 @@ title: Ask My Docs
 description: Production-grade RAG application with hybrid retrieval, cross-encoder reranking, and RAGAS evaluation
 img: assets/img/projects/rag.jpg
 importance: 1
-category: NLP & LLMs
+category: work
 github: https://github.com/chidvilash333
 ---
 
