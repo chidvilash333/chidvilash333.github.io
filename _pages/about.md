@@ -15,7 +15,7 @@ profile:
 
 news: false
 selected_papers: true
-social: true
+social: false
 ---
 
 I'm a first-year Master's student in **Artificial Intelligence** at Northeastern University's Silicon Valley campus, passionate about building practical and impactful AI/ML systems.
