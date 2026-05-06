@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-co-op",
+          title: "Co-op",
+          description: "Co-op readiness assignments and professional documents for Northeastern University Co-op Program.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/coop/";
+          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
