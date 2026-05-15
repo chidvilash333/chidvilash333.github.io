@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chidvilash Yeccharla — AI/ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:#03030a;color:#f0f0ff;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:linear-gradient(#2a6fff,#00cfff);}
+#entry{position:fixed;inset:0;z-index:9999;background:#03030a;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease;}
+#entry.hide{opacity:0;pointer-events:none;}
+#nc{position:absolute;inset:0;display:block;}
+.ec{position:relative;z-index:10;text-align:center;pointer-events:none;}
+.etitle{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.35rem;background:linear-gradient(135deg,#fff 0%,#66ccff 50%,#aaeeff 100%);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gm 4s ease infinite;}
+@keyframes gm{0%,100%{background-position:0%;}50%{background-position:100%;}}
+.esub{font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(100,180,255,0.45);margin-bottom:3rem;}
+.ebtn{pointer-events:all;position:relative;padding:0.85rem 2.6rem;font-family:'Syne',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#88ccff;background:transparent;cursor:pointer;border:1px solid rgba(60,150,255,0.35);border-radius:3px;overflow:hidden;transition:all 0.3s;}
+.ebtn:hover{color:#fff;border-color:rgba(100,190,255,0.75);background:rgba(40,120,255,0.09);}
+.ebtn::after{content:'';position:absolute;top:-200%;left:0;right:0;height:300%;background:linear-gradient(transparent 40%,rgba(80,180,255,0.14),transparent 60%);animation:scan 2.5s linear infinite;}
+@keyframes scan{to{top:100%;}}
+#flash{position:fixed;inset:0;z-index:10000;background:#fff;opacity:0;pointer-events:none;}
+#portfolio{opacity:0;transform:scale(0.985);transition:opacity 0.9s ease,transform 0.9s ease;}
+#portfolio.show{opacity:1;transform:scale(1);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(3,3,10,0.93);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.05);}
+.nlogo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,#66aaff,#00e0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nlinks{display:flex;gap:1.8rem;list-style:none;}
+.nlinks a{color:rgba(255,255,255,0.32);text-decoration:none;font-size:0.74rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s;}
+.nlinks a:hover{color:#fff;}
+#hero{min-height:100vh;display:flex;align-items:center;padding:6rem 3rem 4rem;position:relative;overflow:hidden;}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 70% 35%,rgba(40,100,255,0.07),transparent 70%),radial-gradient(ellipse 40% 50% at 15% 75%,rgba(0,180,255,0.05),transparent 70%);}
+.hcontent{position:relative;z-index:1;max-width:680px;}
+.hbadge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(40,100,255,0.07);border:1px solid rgba(40,100,255,0.18);border-radius:100px;padding:0.28rem 0.9rem;font-size:0.71rem;color:#66aaff;margin-bottom:1.5rem;}
+.bdot{width:6px;height:6px;border-radius:50%;background:#66aaff;animation:bl 2s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:0.2;}}
+.hname{font-family:'Syne',sans-serif;font-size:clamp(3rem,7.5vw,5.5rem);font-weight:800;line-height:1.0;margin-bottom:0.9rem;}
+.gt{background:linear-gradient(135deg,#66ccff,#ffffff,#00e0ff);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 5s ease infinite;}
+@keyframes gs{0%,100%{background-position:0%;}50%{background-position:100%;}}
+.htitle{font-size:1.0rem;color:rgba(255,255,255,0.38);margin-bottom:1.3rem;}
+.htitle b{color:rgba(255,255,255,0.85);font-weight:500;}
+.hdesc{font-size:0.88rem;line-height:1.9;color:rgba(255,255,255,0.38);max-width:550px;margin-bottom:2rem;}
+.hbtns{display:flex;gap:0.9rem;flex-wrap:wrap;}
+.bpri{padding:0.65rem 1.6rem;border-radius:6px;background:linear-gradient(135deg,#2255dd,#0099cc);color:#fff;text-decoration:none;font-weight:500;font-size:0.82rem;border:none;cursor:pointer;transition:opacity 0.2s,transform 0.2s;}
+.bpri:hover{opacity:0.85;transform:translateY(-2px);}
+.bout{padding:0.65rem 1.6rem;border-radius:6px;background:transparent;color:#fff;text-decoration:none;font-weight:500;font-size:0.82rem;cursor:pointer;border:1px solid rgba(255,255,255,0.1);transition:border-color 0.2s,background 0.2s;}
+.bout:hover{border-color:rgba(255,255,255,0.22);background:rgba(255,255,255,0.04);}
+.hstats{display:flex;gap:2.5rem;margin-top:3rem;}
+.sn{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;background:linear-gradient(135deg,#00cfff,#66aaff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.sl{font-size:0.67rem;color:rgba(255,255,255,0.27);text-transform:uppercase;letter-spacing:0.1em;}
+section{padding:5rem 3rem;}
+.slabel{font-size:0.67rem;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.24);margin-bottom:0.4rem;}
+.stitle{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;margin-bottom:2.5rem;}
+.stitle span{background:linear-gradient(135deg,#00cfff,#66aaff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+#about{background:#060614;}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:1100px;margin:0 auto;}
+.atext p{color:rgba(255,255,255,0.4);line-height:1.9;font-size:0.88rem;margin-bottom:0.9rem;}
+.atext p b{color:rgba(255,255,255,0.85);font-weight:500;}
+.atags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.2rem;}
+.atag{padding:0.22rem 0.65rem;border-radius:4px;font-size:0.68rem;border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.33);background:rgba(255,255,255,0.02);}
+.acards{display:flex;flex-direction:column;gap:0.7rem;}
+.acard{padding:1rem 1.2rem;border-radius:10px;background:rgba(255,255,255,0.022);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:0.9rem;transition:border-color 0.2s;}
+.acard:hover{border-color:rgba(60,150,255,0.22);}
+.aci{font-size:1.2rem;width:34px;text-align:center;flex-shrink:0;}
+.act{font-weight:600;font-size:0.83rem;margin-bottom:0.1rem;}
+.acs{font-size:0.73rem;color:rgba(255,255,255,0.3);}
+#skills{background:#03030a;}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.1rem;max-width:1100px;margin:0 auto;}
+.scard{padding:1.2rem;border-radius:10px;background:rgba(255,255,255,0.018);border:1px solid rgba(255,255,255,0.06);border-top:2px solid rgba(0,180,255,0.4);transition:transform 0.2s;}
+.scard:hover{transform:translateY(-3px);}
+.scat{font-size:0.64rem;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;margin-bottom:0.7rem;color:#00cfff;}
+.spills{display:flex;flex-wrap:wrap;gap:0.3rem;}
+.spill{padding:0.2rem 0.55rem;border-radius:3px;font-size:0.68rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.52);}
+#projects{background:#060614;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.1rem;max-width:1100px;margin:0 auto;}
+.pcard{border-radius:12px;overflow:hidden;background:rgba(255,255,255,0.018);border:1px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;transition:transform 0.3s,box-shadow 0.3s;}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.5);}
+.pb{height:3px;background:linear-gradient(90deg,#2255dd,#00cfff);}
+.pbody{padding:1.4rem;flex:1;display:flex;flex-direction:column;}
+.pnum{font-size:0.63rem;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.35rem;}
+.pname{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:0.55rem;}
+.pdesc{font-size:0.8rem;color:rgba(255,255,255,0.37);line-height:1.7;flex:1;margin-bottom:0.85rem;}
+.ptechs{display:flex;flex-wrap:wrap;gap:0.28rem;margin-bottom:0.85rem;}
+.ptag{padding:0.17rem 0.48rem;border-radius:3px;font-size:0.63rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.36);}
+.plink{color:#00cfff;font-size:0.76rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;transition:gap 0.2s;}
+.plink:hover{gap:0.5rem;}
+#experience{background:#03030a;}
+.elist{max-width:750px;margin:0 auto;}
+.eitem{display:grid;grid-template-columns:100px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.05);position:relative;}
+.eitem::before{content:'';position:absolute;left:99px;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.05);}
+.eyear{font-size:0.72rem;color:rgba(255,255,255,0.2);padding-top:0.15rem;text-align:right;padding-right:2rem;}
+.edot{position:absolute;left:93px;top:2.1rem;width:12px;height:12px;border-radius:50%;border:2px solid #00cfff;background:#03030a;}
+.erole{font-family:'Syne',sans-serif;font-weight:700;font-size:0.93rem;margin-bottom:0.2rem;}
+.eco{font-size:0.8rem;font-weight:500;color:#00cfff;margin-bottom:0.7rem;}
+.ebulls{list-style:none;display:flex;flex-direction:column;gap:0.38rem;}
+.ebulls li{font-size:0.8rem;color:rgba(255,255,255,0.37);padding-left:1rem;position:relative;line-height:1.65;}
+.ebulls li::before{content:'→';position:absolute;left:0;color:rgba(255,255,255,0.17);}
+#coop{background:#060614;}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;max-width:1100px;margin:0 auto;}
+.ccard{padding:1.2rem;border-radius:10px;background:rgba(255,255,255,0.018);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:0.85rem;text-decoration:none;color:#fff;transition:transform 0.2s,border-color 0.2s;}
+.ccard:hover{transform:translateY(-3px);border-color:rgba(60,150,255,0.27);}
+.cico{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,#1a4dcc,#0099cc);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.cmod{font-size:0.62rem;color:rgba(255,255,255,0.27);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.1rem;}
+.cname{font-weight:600;font-size:0.82rem;}
+.carr{margin-left:auto;color:rgba(255,255,255,0.17);font-size:0.75rem;}
+#contact{background:#03030a;text-align:center;}
+.ctinner{max-width:520px;margin:0 auto;}
+.cth{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:0.9rem;}
+.cts{color:rgba(255,255,255,0.37);margin-bottom:2.2rem;line-height:1.85;font-size:0.88rem;}
+.ctlinks{display:flex;justify-content:center;gap:0.9rem;flex-wrap:wrap;}
+.ctlink{display:flex;align-items:center;gap:0.4rem;padding:0.6rem 1.3rem;border-radius:6px;text-decoration:none;font-size:0.8rem;font-weight:500;border:1px solid rgba(255,255,255,0.09);color:#fff;background:rgba(255,255,255,0.022);transition:transform 0.2s,border-color 0.2s;}
+.ctlink:hover{transform:translateY(-2px);border-color:rgba(255,255,255,0.2);}
+footer{text-align:center;padding:1.8rem;border-top:1px solid rgba(255,255,255,0.05);font-size:0.72rem;color:rgba(255,255,255,0.17);}
+.rev{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.rev.v{opacity:1;transform:none;}
+@media(max-width:768px){nav{padding:1rem 1.5rem;}.nlinks{display:none;}section{padding:3.5rem 1.5rem;}#hero{padding:5.5rem 1.5rem 3rem;}.agrid,.eitem{grid-template-columns:1fr;}.eitem::before,.edot,.eyear{display:none;}.hstats{gap:1.5rem;}}
+</style>
+</head>
+<body>
+<div id="flash"></div>
+<div id="entry">
+  <canvas id="nc"></canvas>
+  <div class="ec">
+    <div class="etitle">Chidvilash<br>Yeccharla</div>
+    <div class="esub">AI / ML Engineer · Northeastern University</div>
+    <button class="ebtn" onclick="startEntry()">Initialize Neural Link</button>
+  </div>
+</div>
+<div id="portfolio">
+<nav>
+  <div class="nlogo">CY</div>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li>
+    <li><a href="#coop">Co-op</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section id="hero"><div class="hbg"></div><div class="hcontent">
+  <div class="hbadge"><span class="bdot"></span>Open to Summer 2027 Internship</div>
+  <h1 class="hname"><span class="gt">Chidvilash</span><br>Yeccharla</h1>
+  <p class="htitle"><b>MS Artificial Intelligence</b> · Northeastern University, Silicon Valley · Graduating Dec 2027</p>
+  <p class="hdesc">I don't just study AI — I build with it. From production RAG systems to full-stack AI tools, I care about the space between "works in a demo" and "works in production." Rare mix of software engineering depth and hardware-level thinking from my ECE background.</p>
+  <div class="hbtns"><a href="#projects" class="bpri">View Projects</a><a href="#contact" class="bout">Get in Touch</a></div>
+  <div class="hstats">
+    <div><div class="sn">4+</div><div class="sl">AI Projects</div></div>
+    <div><div class="sn">1</div><div class="sl">Internship</div></div>
+    <div><div class="sn">5+</div><div class="sl">Yrs Engineering</div></div>
+  </div>
+</div></section>
+<section id="about"><div class="agrid rev">
+  <div class="atext">
+    <div class="slabel">Who I Am</div><h2 class="stitle">About <span>Me</span></h2>
+    <p>I'm a <b>MS AI student at Northeastern University</b>, Silicon Valley — driven by genuine curiosity for building AI systems that solve real problems, not just systems that look good in demos.</p>
+    <p>My background spans <b>embedded systems and VLSI engineering</b> to cutting-edge <b>LLM applications and RAG systems</b> — a rare combination useful for edge AI, embedded ML, and full-stack AI roles.</p>
+    <p>I'm actively seeking <b>Summer 2027 internship opportunities</b> in Software Engineering, ML Engineering, or Applied AI. Let's connect if you're building something real.</p>
+    <div class="atags"><span class="atag">LLMs</span><span class="atag">RAG</span><span class="atag">Computer Vision</span><span class="atag">NLP</span><span class="atag">PyTorch</span><span class="atag">LangChain</span><span class="atag">Flask</span><span class="atag">React</span><span class="atag">Edge AI</span></div>
+  </div>
+  <div class="acards">
+    <div class="acard"><div class="aci">🎓</div><div><div class="act">Northeastern University</div><div class="acs">MS AI · Silicon Valley · Jan 2026 – Dec 2027</div></div></div>
+    <div class="acard"><div class="aci">🏛️</div><div><div class="act">VIT-AP University</div><div class="acs">B.Tech ECE with Minor in AI/ML · 2021–2025</div></div></div>
+    <div class="acard"><div class="aci">📍</div><div><div class="act">San Jose, California</div><div class="acs">Silicon Valley · Open to Summer 2027 internships</div></div></div>
+    <div class="acard"><div class="aci">🔬</div><div><div class="act">Research Interest</div><div class="acs">Emotion-Responsive AI · ICISSC-2025 (Springer, forthcoming)</div></div></div>
+  </div>
+</div></section>
+<section id="skills"><div style="max-width:1100px;margin:0 auto;">
+  <div class="slabel rev">What I Know</div><h2 class="stitle rev">Technical <span>Skills</span></h2>
+  <div class="sgrid">
+    <div class="scard rev"><div class="scat">Languages</div><div class="spills"><span class="spill">Python</span><span class="spill">SQL</span><span class="spill">Bash</span><span class="spill">C++</span></div></div>
+    <div class="scard rev"><div class="scat">AI / ML</div><div class="spills"><span class="spill">PyTorch</span><span class="spill">TensorFlow</span><span class="spill">Scikit-learn</span><span class="spill">XGBoost</span><span class="spill">HuggingFace</span></div></div>
+    <div class="scard rev"><div class="scat">LLMs & NLP</div><div class="spills"><span class="spill">LangChain</span><span class="spill">RAG</span><span class="spill">BERT</span><span class="spill">GPT APIs</span><span class="spill">Prompt Eng.</span><span class="spill">RAGAS</span></div></div>
+    <div class="scard rev"><div class="scat">Computer Vision</div><div class="spills"><span class="spill">OpenCV</span><span class="spill">CNN</span><span class="spill">Transfer Learning</span><span class="spill">EfficientNet</span><span class="spill">Haar Cascades</span></div></div>
+    <div class="scard rev"><div class="scat">Tools & Platforms</div><div class="spills"><span class="spill">Git</span><span class="spill">Docker</span><span class="spill">Flask</span><span class="spill">React</span><span class="spill">FastAPI</span><span class="spill">Streamlit</span><span class="spill">ChromaDB</span></div></div>
+  </div>
+</div></section>
+<section id="projects"><div style="max-width:1100px;margin:0 auto;">
+  <div class="slabel rev">What I've Built</div><h2 class="stitle rev">Featured <span>Projects</span></h2>
+  <div class="pgrid">
+    <div class="pcard rev"><div class="pb"></div><div class="pbody"><div class="pnum">Project 01</div><div class="pname">Ask My Docs — RAG System</div><div class="pdesc">Production-grade RAG app with hybrid BM25 + dense retrieval, cross-encoder reranking, and RAGAS evaluation. Built the way real AI teams build — not just a notebook demo.</div><div class="ptechs"><span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">ChromaDB</span><span class="ptag">HuggingFace</span><span class="ptag">RAGAS</span></div><a href="https://github.com/chidvilash333" target="_blank" class="plink">View on GitHub →</a></div></div>
+    <div class="pcard rev"><div class="pb"></div><div class="pbody"><div class="pnum">Project 02</div><div class="pname">Salary Optimization Advisor</div><div class="pdesc">Full-stack AI tool using Flask, Groq API, and live web scraping for personalized salary negotiation — dynamic prompt engineering based on role, experience, and market data.</div><div class="ptechs"><span class="ptag">Python</span><span class="ptag">Flask</span><span class="ptag">Groq API</span><span class="ptag">LLaMA</span></div><a href="https://github.com/chidvilash333/Salary-Optimization-Advisor" target="_blank" class="plink">View on GitHub →</a></div></div>
+    <div class="pcard rev"><div class="pb"></div><div class="pbody"><div class="pnum">Project 03</div><div class="pname">Emotion Recognition System</div><div class="pdesc">CNN-based emotion recognition achieving ~90% accuracy using TensorFlow and OpenCV. Full ML pipeline — preprocessing, training, evaluation, and real-time inference.</div><div class="ptechs"><span class="ptag">Python</span><span class="ptag">TensorFlow</span><span class="ptag">OpenCV</span><span class="ptag">CNN</span></div><a href="https://github.com/chidvilash333" target="_blank" class="plink">View on GitHub →</a></div></div>
+    <div class="pcard rev"><div class="pb"></div><div class="pbody"><div class="pnum">Project 04</div><div class="pname">Intelligent Spell Corrector</div><div class="pdesc">DP-based spell correction using Levenshtein edit distance with interactive Streamlit demo and step-by-step DP table visualizer. Built for CS 5800 Algorithms.</div><div class="ptechs"><span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">DP Algorithms</span><span class="ptag">NLP</span></div><a href="https://github.com/chidvilash333" target="_blank" class="plink">View on GitHub →</a></div></div>
+  </div>
+</div></section>
+<section id="experience"><div style="max-width:1100px;margin:0 auto;">
+  <div class="slabel rev">Where I've Worked</div><h2 class="stitle rev">Work <span>Experience</span></h2>
+  <div class="elist">
+    <div class="eitem rev"><div class="eyear">Sep–Nov 2023</div><div class="edot"></div>
+    <div><div class="erole">Machine Learning Intern</div><div class="eco">ACMEGRADE · Remote, India</div>
+    <ul class="ebulls">
+      <li>Built 3 end-to-end ML projects — Face Detection, Movie Recommendation, and Emotion Recognition using Python, TensorFlow, OpenCV, and scikit-learn</li>
+      <li>Emotion Recognition model achieving ~90% accuracy using CNN-based classification</li>
+      <li>Movie Recommendation System using collaborative filtering on real-world datasets</li>
+      <li>Face Detection pipeline with OpenCV and Haar Cascades for real-time image processing</li>
+    </ul></div></div>
+  </div>
+</div></section>
+<section id="coop"><div style="max-width:1100px;margin:0 auto;">
+  <div class="slabel rev">Northeastern Co-op Program</div><h2 class="stitle rev">Co-op <span>Readiness</span></h2>
+  <div class="cgrid">
+    <a href="https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4fefd45c-afe6-4ca4-8148-b40a0056f82c" target="_blank" class="ccard rev"><div class="cico">🎤</div><div><div class="cmod">Module 4</div><div class="cname">Elevator Pitch</div></div><div class="carr">↗</div></a>
+    <a href="https://www.linkedin.com/in/chidvilash-yeccharla-b7099528a/" target="_blank" class="ccard rev"><div class="cico">💼</div><div><div class="cmod">Module 4</div><div class="cname">LinkedIn Profile</div></div><div class="carr">↗</div></a>
+    <a href="assets/resume.pdf" target="_blank" class="ccard rev"><div class="cico">📄</div><div><div class="cmod">Module 7</div><div class="cname">Professional Resume</div></div><div class="carr">↗</div></a>
+    <a href="https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea217aca-a0b3-4d00-a681-b442000f31dc" target="_blank" class="ccard rev"><div class="cico">🎬</div><div><div class="cmod">Module 8</div><div class="cname">Tell Me About Yourself</div></div><div class="carr">↗</div></a>
+    <a href="assets/job_strategy.pdf" target="_blank" class="ccard rev"><div class="cico">🗺️</div><div><div class="cmod">Module 9</div><div class="cname">Job Search Strategy</div></div><div class="carr">↗</div></a>
+  </div>
+</div></section>
+<section id="contact"><div class="ctinner rev">
+  <div class="slabel">Get In Touch</div><h2 class="cth">Let's <span class="gt">Connect</span></h2>
+  <p class="cts">Looking for Summer 2027 internship opportunities in Software Engineering, ML Engineering, or Applied AI. Whether it's about a role, a project, or just a conversation about AI — reach out!</p>
+  <div class="ctlinks">
+    <a href="mailto:chidvilash333@gmail.com" class="ctlink">✉️ Email Me</a>
+    <a href="https://www.linkedin.com/in/chidvilash-yeccharla-b7099528a/" target="_blank" class="ctlink">💼 LinkedIn</a>
+    <a href="https://github.com/chidvilash333" target="_blank" class="ctlink">🐙 GitHub</a>
+  </div>
+</div></section>
+<footer>© 2026 Chidvilash Yeccharla · AI/ML Engineer · San Jose, California</footer>
+</div>
+
+<script>
+/* ═══════════════════════════════════════
+   BRAIN NEURONS — Professional Blue/Cyan
+   Soma + Dendrites + Axon + Pulses
+═══════════════════════════════════════ */
+const canvas = document.getElementById('nc');
+const ctx    = canvas.getContext('2d');
+let W, H, neurons = [], phase = 'idle', animId, tick = 0;
+
+function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', resize);
+
+// Professional 2-color palette: cyan primary, soft blue secondary
+const PALETTE = [
+  { soma:'#00E5FF', axon:'#0088BB', dim:'rgba(0,200,240,' },
+  { soma:'#4FC8FF', axon:'#1166AA', dim:'rgba(60,180,240,' },
+  { soma:'#B8EEFF', axon:'#3399CC', dim:'rgba(160,220,255,' },
+];
+
+/* ── Branch (bezier segment tree) ── */
+class Branch {
+  constructor(angle, len, depth, spread){
+    this.a    = angle + (Math.random()-.5)*0.3;
+    this.len  = len;
+    this.cp   = (Math.random()-.5)*0.5;
+    this.kids = [];
+    if(depth>0){
+      const s = spread + Math.random()*0.1;
+      this.kids.push(new Branch(this.a-s, len*0.63, depth-1, spread));
+      if(depth>1 || Math.random()>0.2)
+        this.kids.push(new Branch(this.a+s, len*0.63, depth-1, spread));
+    }
+  }
+  ends(ox,oy){
+    const ex=ox+Math.cos(this.a)*this.len, ey=oy+Math.sin(this.a)*this.len;
+    return this.kids.length ? this.kids.flatMap(k=>k.ends(ex,ey)) : [{x:ex,y:ey}];
+  }
+  draw(ctx,ox,oy,w,col,al,blur){
+    const ex=ox+Math.cos(this.a)*this.len, ey=oy+Math.sin(this.a)*this.len;
+    const ca=this.a+this.cp, cpx=ox+Math.cos(ca)*this.len*.5, cpy=oy+Math.sin(ca)*this.len*.5;
+    ctx.beginPath(); ctx.moveTo(ox,oy); ctx.quadraticCurveTo(cpx,cpy,ex,ey);
+    ctx.strokeStyle=col; ctx.lineWidth=Math.max(0.2,w); ctx.globalAlpha=al;
+    if(blur>0){ctx.shadowColor=col;ctx.shadowBlur=blur;}
+    ctx.stroke(); ctx.shadowBlur=0;
+    this.kids.forEach(k=>k.draw(ctx,ex,ey,w*.56,col,al*.78,blur*.55));
+  }
+}
+
+/* ── Pulse (action potential dot) ── */
+class Pulse {
+  constructor(ex,ey,col){ this.ex=ex; this.ey=ey; this.col=col; this.t=0; this.spd=0.016+Math.random()*.014; }
+  tick(){ this.t+=this.spd; return this.t<1.08; }
+  draw(ctx){
+    const x=this.ex*this.t, y=this.ey*this.t;
+    const fade=this.t>.8?(1-this.t)/.2:1;
+    ctx.save();
+    ctx.shadowColor=this.col; ctx.shadowBlur=16;
+    ctx.globalAlpha=fade;
+    ctx.beginPath(); ctx.arc(x,y,2.8,0,Math.PI*2);
+    ctx.fillStyle='#ffffff'; ctx.fill();
+    ctx.beginPath(); ctx.arc(x,y,5.5,0,Math.PI*2);
+    ctx.fillStyle=this.col+'66'; ctx.fill();
+    ctx.restore();
+  }
+}
+
+/* ── Neuron ── */
+class Neuron {
+  constructor(){
+    this.x=Math.random()*W; this.y=Math.random()*H;
+    this.vx=(Math.random()-.5)*.15; this.vy=(Math.random()-.5)*.15;
+    const p=PALETTE[Math.floor(Math.random()*PALETTE.length)];
+    this.sc=p.soma; this.ac=p.axon; this.dm=p.dim;
+    this.r=7+Math.random()*5;
+    this.ph=Math.random()*Math.PI*2;
+    this.ft=Math.random()*200;
+    this.gb=0; // glow boost
+    this.pulses=[];
+
+    // 5-6 dendrites depth-2
+    this.dends=[];
+    const nd=5+Math.floor(Math.random()*2);
+    for(let i=0;i<nd;i++){
+      const a=(i/nd)*Math.PI*2+(Math.random()-.5)*.3;
+      this.dends.push(new Branch(a,16+Math.random()*12,2,.3));
+    }
+    // axon depth-3
+    this.axon=new Branch(Math.random()*Math.PI*2, 44+Math.random()*28, 3, .28);
+    this.axEnds=this.axon.ends(0,0);
+  }
+
+  fire(){
+    this.gb=1;
+    this.axEnds.forEach(e=>this.pulses.push(new Pulse(e.x,e.y,this.ac)));
+  }
+
+  update(inten){
+    this.ph+=.02; this.gb=Math.max(0,this.gb-.03);
+    this.x+=this.vx; this.y+=this.vy;
+    if(this.x<0||this.x>W)this.vx*=-1;
+    if(this.y<0||this.y>H)this.vy*=-1;
+    this.ft-=(1+inten*5);
+    if(this.ft<=0){this.fire();this.ft=55+Math.random()*145;}
+    this.pulses=this.pulses.filter(p=>p.tick());
+  }
+
+  draw(ext){
+    const pulse=.84+Math.sin(this.ph)*.16;
+    const glow=8+this.gb*20+ext*16;
+    ctx.save(); ctx.translate(this.x,this.y);
+
+    // dendrites
+    this.dends.forEach(d=>d.draw(ctx,0,0,1.0,this.sc,0.38+ext*.28,glow*.22));
+
+    // axon
+    this.axon.draw(ctx,0,0,1.2,this.ac,0.42+ext*.3,glow*.25);
+
+    // soma halo
+    const g=ctx.createRadialGradient(0,0,this.r*.4,0,0,this.r*3.8);
+    g.addColorStop(0,this.dm+(0.3+this.gb*.3)+')');
+    g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.globalAlpha=.7+this.gb*.25;
+    ctx.fillStyle=g; ctx.beginPath(); ctx.arc(0,0,this.r*3.8,0,Math.PI*2); ctx.fill();
+
+    // soma body
+    ctx.shadowColor=this.sc; ctx.shadowBlur=glow;
+    ctx.globalAlpha=.85+this.gb*.12;
+    ctx.beginPath(); ctx.arc(0,0,this.r*pulse,0,Math.PI*2);
+    ctx.fillStyle=this.sc; ctx.fill();
+
+    // nucleus
+    ctx.shadowBlur=4; ctx.globalAlpha=.96;
+    ctx.beginPath(); ctx.arc(0,0,this.r*.36*pulse,0,Math.PI*2);
+    ctx.fillStyle='#fff'; ctx.fill();
+
+    ctx.shadowBlur=0; ctx.globalAlpha=1;
+
+    // pulses
+    this.pulses.forEach(p=>p.draw(ctx));
+    ctx.restore();
+  }
+}
+
+for(let i=0;i<14;i++) neurons.push(new Neuron());
+
+function drawLinks(ext){
+  for(let i=0;i<neurons.length;i++){
+    for(let j=i+1;j<neurons.length;j++){
+      const a=neurons[i],b=neurons[j];
+      const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+      const mx=180+ext*60;
+      if(d<mx){
+        const al=(1-d/mx)*(.14+ext*.35);
+        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+        ctx.strokeStyle=`rgba(0,180,255,${al})`;ctx.lineWidth=.6+ext*.7;ctx.stroke();
+      }
+    }
+  }
+}
+
+function idleLoop(){
+  ctx.clearRect(0,0,W,H); tick++;
+  neurons.forEach(n=>n.update(0));
+  drawLinks(0);
+  neurons.forEach(n=>n.draw(0));
+  animId=requestAnimationFrame(idleLoop);
+}
+idleLoop();
+
+function startEntry(){
+  if(phase!=='idle')return; phase='fire';
+  cancelAnimationFrame(animId);
+  const cx=W/2,cy=H/2; let ft=0;
+
+  // Phase 1: intense firing (40 frames)
+  function fireLoop(){
+    ctx.clearRect(0,0,W,H); ft++;
+    const it=Math.min(ft/40,1);
+    neurons.forEach(n=>{
+      const dx=cx-n.x,dy=cy-n.y;
+      n.vx+=dx*.004*(1+it*5); n.vy+=dy*.004*(1+it*5);
+      n.vx*=.91; n.vy*=.91; n.x+=n.vx; n.y+=n.vy;
+      n.update(it);
+    });
+    drawLinks(it);
+    neurons.forEach(n=>n.draw(it));
+    const g=ctx.createRadialGradient(cx,cy,0,cx,cy,130*it+20);
+    g.addColorStop(0,`rgba(0,200,255,${it*.4})`);g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.globalAlpha=1;ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    if(ft<55) animId=requestAnimationFrame(fireLoop); else converge();
+  }
+
+  // Phase 2: converge (22 frames)
+  function converge(){
+    let ct=0;
+    function cl(){
+      ctx.clearRect(0,0,W,H); ct++;
+      const p=Math.min(ct/22,1);
+      neurons.forEach(n=>{n.x+=(cx-n.x)*.25;n.y+=(cy-n.y)*.25;n.update(1);});
+      drawLinks(1); neurons.forEach(n=>n.draw(1));
+      const g=ctx.createRadialGradient(cx,cy,0,cx,cy,60+90*p);
+      g.addColorStop(0,`rgba(255,255,255,${p})`);
+      g.addColorStop(.5,`rgba(100,200,255,${p*.6})`);
+      g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+      if(ct<28) animId=requestAnimationFrame(cl); else doFlash();
+    }
+    cl();
+  }
+
+  function doFlash(){
+    const f=document.getElementById('flash');
+    f.style.transition='opacity 0.1s';f.style.opacity='1';
+    setTimeout(()=>{
+      f.style.transition='opacity 0.6s';f.style.opacity='0';
+      document.getElementById('entry').classList.add('hide');
+      document.getElementById('portfolio').classList.add('show');
+      ctx.clearRect(0,0,W,H);
+      setTimeout(()=>document.getElementById('entry').style.display='none',900);
+    },150);
+  }
+  fireLoop();
+}
+
+const obs=new IntersectionObserver(ee=>ee.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');}),{threshold:.1});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
