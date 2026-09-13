@@ -136,6 +136,7 @@ footer{text-align:center;padding:1.8rem;border-top:1px solid rgba(255,255,255,0.
     <div class="etitle">Chidvilash<br>Yeccharla</div>
     <div class="esub">AI / ML Engineer · Northeastern University</div>
     <button class="ebtn" onclick="startEntry()">Initialize Neural Link</button>
+    <div style="margin-top:1.3rem;"><a href="#" onclick="skipEntry();return false;" style="pointer-events:all;color:rgba(120,180,255,0.4);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='rgba(150,200,255,0.8)'" onmouseout="this.style.color='rgba(120,180,255,0.4)'">Skip intro →</a></div>
   </div>
 </div>
 
@@ -425,6 +426,13 @@ function idleLoop(){ctx.clearRect(0,0,W,H);tick++;neurons.forEach(n=>n.update(0)
 idleLoop();
 
 /* ═══════════ ENTRY ANIMATION + SOUNDS ═══════════ */
+function skipEntry(){
+  document.getElementById('entry').classList.add('hide');
+  document.getElementById('portfolio').classList.add('show');
+  cancelAnimationFrame(animId);
+  setTimeout(()=>document.getElementById('entry').style.display='none',500);
+}
+  
 function startEntry(){
   if(phase!=='idle')return; phase='fire';
   initAudio();
